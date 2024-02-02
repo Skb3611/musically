@@ -1,4 +1,4 @@
-Access-Control-Allow-Credentials: true;
+
 let currentsong = new Audio();
 let songs=[]
 let folders=[]

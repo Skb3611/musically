@@ -1,0 +1,89 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+  :root{
+    --bg2:#121212;
+    --bg3:#181818;
+  }
+.invert{
+    filter: invert(1);
+    height: 25px;
+}
+.img-width{
+  width: 70%;
+}
+.list-style{
+    list-style: none;
+}
+.pointer{
+  cursor: pointer;
+}
+
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333; /* color of the thumb */
+  border-radius: 6px; /* roundness of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* color of the thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222; /* color of the track */
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #444; /* color of the track on hover */
+}
+
+
+
+
+/* Reset some default styles */
+
+
+/* Style the container for the slider */
+.slider-container {
+  width: 50%;
+  margin: 50px auto;
+}
+
+/* Style the range input for dark theme */
+.dark-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #444;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.dark-slider:hover {
+  opacity: 1;
+}
+
+/* Style the thumb (handle) of the slider */
+.dark-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.8);
+}
+
+/* Style the value indicator next to the slider */
+output {
+  display: block;
+  font-size: 1.2em;
+  margin-top: 10px;
+}

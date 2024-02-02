@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music app</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utils.css">    
+</head>
+
+<body>
+    <main>
+
+        <div class="left">
+            <!-- <div class="head">
+                <ul class="list-style">
+                    <li><img class="invert" src="assets/Images/logo.svg" alt="">
+                    </li>
+                    <li>
+                        <img class="invert" src="assets/Images/home.svg" alt="">
+                        <span>Home</span>
+                    </li>
+                    <li><img class="invert" src="assets/Images/search.svg" alt="">
+                        <span>Search</span>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="playlist">
+                <div class="title">
+                    <img class="invert" src="assets/Images/playlist.svg" alt="">
+                    <span>
+                        Your Playlist
+                    </span>
+                    <img src="assets/Images/close.svg" class="invert close" alt="">
+                </div>
+                    <div class="container">
+                        
+                    </div>
+                
+            </div>
+        </div>
+        <div class="right">
+            <!-- <div class="ham invert"></div> -->
+            <div class="heading">
+                <img class="invert ham pointer" src="assets/Images/hamburger.svg" alt="">
+                Albums</div>
+            <div class="cards-container">
+                
+            </div>
+        </div>
+    </main>
+    <div class="playbar">
+        <div class="playbar-left">
+            <div class="song-name"></div>
+        </div>
+        <div class="playbar-middle">
+            <div class="btns invert pointer">
+                <img src="assets/Images/previous.svg" alt="" id="prev">
+                <img src="assets/Images/play.svg" alt="" id="play">
+                <img src="assets/Images/next.svg" alt="" id="next">
+            </div>
+            <div class="seekbar">
+                <span id="currenttime">0.00</span>
+                <input type="range"min="0" max="100" value="0" class="dark-slider" id="seekbar">
+                <span id="duration">0.00</span>
+            </div>
+        </div>
+        <div class="playbar-right">
+            <img src="assets/Images/volume.svg" alt="" class="invert pointer">
+            <input type="range" min="0" max="100" value="50" class="dark-slider">
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

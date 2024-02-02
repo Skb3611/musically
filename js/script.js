@@ -8,7 +8,7 @@ currentsong.volume=0.5;
 
 async function get_songs(folder) {
     let temp = []
-    let a = await fetch(`http://127.0.0.1:5500/assets/Songs/${folder}`)
+    let a = await fetch(`assets/Songs/${folder}`)
     let responce = await a.text()
     // console.log(responce)
     let div = document.createElement("div")
@@ -39,8 +39,8 @@ function    playmusic(track) {
     name.innerHTML = currentsong.src.split(".COM")[1].replaceAll("%20", " ").replaceAll("%5D", " ")
 
 
-    // http://127.0.0.1:5500/assets/songs/%5BSPOTIFY-DOWNLOADER.COM%5D%20Arjan%20Vailly.mp3
-    // http://127.0.0.1:5500/assets/Songs/%5BSPOTIFY-DOWNLOADER.COM%5DArjan%20Vailly.mp3a
+    // assets/songs/%5BSPOTIFY-DOWNLOADER.COM%5D%20Arjan%20Vailly.mp3
+    // assets/Songs/%5BSPOTIFY-DOWNLOADER.COM%5DArjan%20Vailly.mp3a
   
 }
 function secondsToMinutesSeconds(seconds) {
@@ -61,7 +61,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getFolders(){
     let temp=[]
-    temp=await fetch("http://127.0.0.1:5500/assets/songs/")
+    temp=await fetch("assets/songs/")
     let responce=await temp.text()
     let div=document.createElement("div")
     div.innerHTML=responce
@@ -172,13 +172,13 @@ async function main() {
         else volume.src="assets/Images/volume.svg"
     })
     volume.addEventListener("click",(e)=>{
-     if (volume.src=="http://127.0.0.1:5500/assets/Images/volume.svg") {
-        volume.src="http://127.0.0.1:5500/assets/Images/mute.svg"
+     if (volume.src=="assets/Images/volume.svg") {
+        volume.src="assets/Images/mute.svg"
         currentsong.volume=0
         volume_bar.value=0
      }
      else{
-        volume.src="http://127.0.0.1:5500/assets/Images/volume.svg"
+        volume.src="assets/Images/volume.svg"
         currentsong.volume=0.5
         volume_bar.value=50
      }
@@ -188,8 +188,8 @@ async function main() {
 // Rendering folders
 let cards_container=document.querySelector(".cards-container")
 for (const iterator of folders) {
-    let foldername=decodeURI(iterator.split("http://127.0.0.1:5500/assets/songs/")[1])
-    let noOfSongs=await get_songs(decodeURI(iterator.split("http://127.0.0.1:5500/assets/songs/")[1]))
+    let foldername=decodeURI(iterator.split("assets/songs/")[1])
+    let noOfSongs=await get_songs(decodeURI(iterator.split("assets/songs/")[1]))
     console.log(iterator)
     cards_container.innerHTML+=`<div data-folder="${foldername}"class="card pointer">
     <img class="img-width" src="assets/Songs/${foldername}/cover.jpg" alt="">

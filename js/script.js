@@ -1,3 +1,4 @@
+Access-Control-Allow-Origin: *
 let currentsong = new Audio();
 let songs=[]
 let folders=[]
